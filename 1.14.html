@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 14</title>
+    </head>
+
+ 
+    <body>
+
+        <div position = "center">
+
+            <form action="./1.14.php" name="form" method="POST">
+                <br>
+                Nombre:
+                <input type="text" maxlength="25" name="nombre">
+                <br>
+                Apellidos:
+                <input type="text" maxlength="40" name="apellidos"> 
+                <br>
+                Edad:
+                <input type="number"  name="edad" max="150">
+                <br>
+                Sexo: 
+                <br>
+                    
+                    <input type="radio" name="sexo" value="hombre">
+                    Hombre
+                    <br>
+                      
+                    <input type="radio" name="sexo" value="mujer">
+                    Mujer 
+                    <br>
+                    
+                    <input type="radio" name="sexo" value="nc">
+                    No consta
+                <br>
+                Ciudad de nacimiento:
+                <input type="text" maxlength="25" name="ciunac">
+                <br>
+                Ciudad de residencia:
+                <input type="text" maxlength="25" name="ciures">
+                <br>
+                Licenciatura:
+                <input type="text" maxlength="25" name="licenciatura">
+                <br>
+                Curso:
+                <select name="curso">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                </select>
+
+            <input type="submit" name="Enviar">
+            <input type="reset" name="Borrar">
+
+            </form>
+        </div>
+
+    </body>
+</html>
