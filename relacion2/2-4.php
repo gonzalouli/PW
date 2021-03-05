@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Ejercicio 1</title>
+        <title>Ejercicio 4</title>
         <link href="2-1.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-    <h1 style= "color: blue;">Datos de la empresa</h1>
+
+    <h1 style= "color: blue;" align="center" >Datos de la empresa</h1>
+    <h2 align="center" >¿Qué noticia desea eliminar?</h2>
+ 
     <?php   
         $conexion =mysqli_connect("localhost","cursophp", null , "lindavista");
 
@@ -25,7 +28,9 @@
                     <th>Categoria</th>
                     <th>Fecha</th>
                     <th>Imagen</th>
-                    </tr>";
+                    <th>Borrar</th>
+                    </tr>
+                    <form method= \"POST\" action=\"2-4-B.php\" >";
                 }
                     $filename = $fila['imagen']; //nombre de la imagen
                     $dir = "./imgs/".$filename ;  //directorio en ella, lo hago asi porque emborronaba la legibilidad en href ./imgs/filename con las comas y demás
@@ -39,19 +44,19 @@
                     <td> <a href=$dir>";
                     if($filename != null) //si no hay imagen da igual, porque no aparece el hipervinculo
                         echo "<img src=\"./imgs/img.png\" width=\"30px\" height=\"30px\" /> </a> </td>";
-                    echo "<tr>";
+                    $id = $fila['id'];
+                    echo "<td>
+                        <input style=\"width:30px; height:30px;\" name=\"eliminadas[]\" value=$id type=\"checkbox\"/>    
+                    </td>";
+                        echo "<tr>";
             }
-            echo "</table></div>";
+            echo "<input type=\"submit\" name=\"submit\" value=\"Borrar noticia\" />
+            </form></table>";
         }else
             echo("No existe la BBDD");
             
         mysqli_close($conexion);
-        echo " <br>   <form action=\"2-3.html\" >
-        <input type=\"submit\" value=\"Subir una noticia\" />
-        </form>";
-        echo " <br>   <form action=\"2-4.php\" >
-        <input type=\"submit\" value=\"Borrar una noticia\" />
-        </form>";
+    
 
     ?>
     </body>

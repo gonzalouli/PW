@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 3</title>
+    </head>
+    <body>
+        <form enctype="multipart/form-data" method="POST" action="2-3.php">
+            <p style="font-weight: bold; text-align: center;" >  Titulo: * </p>
+            <div style="text-align: center;">
+                <input type="text" name="titulo" required>
+            </div>
+            <p style="font-weight: bold; text-align: center;" >  Texto: * </p>
+            <div style="text-align: center;">
+                <textarea rows="10" cols="50" name="texto" required></textarea>
+            </div>
+            <p style="font-weight: bold; text-align: center;" >  Categoria: </p>
+            <div style="text-align: center;">
+                <select name="categoria">
+                    <option>promociones</option>
+                    <option>ofertas</option>
+                    <option>costas</option>
+                    <option>sin promocion</option>
+                </select>
+            </div>
+            <p style="font-weight: bold; text-align: center;" >  Imagen: </p>
+            <div style="text-align: center;">
+
+                   <input name="archivo" type="file" /><br><br>
+                   <input type="submit" value="Enviar noticia" />
+                
+            </div>
+        </form>
+<br>
+
+        <div style=text-align:center;>
+            <form action="2-1.php" >
+                <input type="submit" value="Volver a Noticias" />
+            </form>
+        </div>
+
+    </body>
+</html>
